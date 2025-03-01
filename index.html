@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toggle-container">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="toggle-label"></label>
+    </div>
+
+    <div class="container">
+        <h2>Age Predictor</h2>
+        <label for="dob">Enter your Date of Birth:</label>
+        <input type="date" id="dob">
+        <button onclick="calculateAge()">Predict Age</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

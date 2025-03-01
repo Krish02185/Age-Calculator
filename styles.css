@@ -1,0 +1,148 @@
+﻿/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Default (Dark Mode) */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #333);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.5s, color 0.5s;
+}
+
+    /* Light Mode */
+    body.light-mode {
+        background: linear-gradient(135deg, #f3f3f3, #ffffff);
+        color: black;
+    }
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: background 0.5s;
+}
+
+body.light-mode .container {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Input Field */
+input {
+    padding: 10px;
+    width: 85%;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    transition: background 0.5s, color 0.5s;
+}
+
+body.light-mode input {
+    background: rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(135deg, gold, orange);
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+    button:hover {
+        background: linear-gradient(135deg, orange, red);
+        transform: scale(1.05);
+    }
+
+/* Result Text */
+p {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #ffdf00;
+}
+
+/* Light Mode Result Text */
+body.light-mode p {
+    color: #333;
+}
+
+/* Dark/Light Mode Toggle */
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-label {
+    display: block;
+    width: 50px;
+    height: 25px;
+    background: #444;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .toggle-label::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        top: 50%;
+        left: 3px;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+    }
+
+input[type="checkbox"] {
+    display: none;
+}
+
+    input[type="checkbox"]:checked + .toggle-label {
+        background: gold;
+    }
+
+        input[type="checkbox"]:checked + .toggle-label::before {
+            left: 26px;
+        }
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+
+    input {
+        width: 100%;
+    }
+}
