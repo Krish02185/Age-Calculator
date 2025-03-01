@@ -1,7 +1,5 @@
 # Age Calculator
 
-![Age Calculator](https://age-calculator-ks.vercel.app/favicon.ico)
-
 ## Overview
 The **Age Calculator** is a simple web application that allows users to calculate their exact age in years, months, and days based on their date of birth. It provides an intuitive and user-friendly interface for quick and accurate calculations.
 
